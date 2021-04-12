@@ -7,9 +7,10 @@ class Escaleras_Serpientes:
         pass
 
     def generar_tablero(self, numero_jugadores):
-        self.jugadores = {}
+        self.jugadores = {} ''' key> value   pepe:3 , javier: 4, luis:100'''
 
-        for i in range(numero_jugadores):
+        for i in range(numero_jugadores):  # 4   desde 0 hasta 3
+            # ingresde el nombre dle jugador 1 0 hasta 3
             nombre = input('Ingrese nombre del jugador {} :'.format(i+1))
             self.jugadores[nombre] = 0
 
@@ -19,7 +20,7 @@ class Escaleras_Serpientes:
         # Genero las escaleras y serpientes
         numero_escaleras = 0
         numero_serpientes = 0
-        escaleras_inicio = []
+        escaleras_inicio = []  # 3 pero te llega hasta 10
         escaleras_final = []
         serpientes_inicio = []
         serpientes_final = []
@@ -71,8 +72,17 @@ class Escaleras_Serpientes:
                                     1] = serpientes_final[i]
 
     def imprimir_tablero(self):
+        '''
+        1 2 3 4
 
-        for filas in range(9, -1, -1):
+
+        ... 100 
+        100
+
+        4321
+
+         '''
+        for filas in range(9, -1, -1):  # 9 8 7 (inicio, final, el paso )
             for columnas in range(0, 10):
                 print('|{}|'.format(
                     self.posiciones_tablero[(filas*10)+columnas]), end='')
@@ -186,4 +196,22 @@ class Escaleras_Serpientes:
 
 if __name__ == "__main__":
     juego = Escaleras_Serpientes()
-    juego.start()
+    juego.start()  # no afecta
+
+''' ññlñlñl '''
+''' 
+
+clase = molde
+objeto es 
+un carro
+atributos 
+1. numero llantas
+2. color
+3. marca
+metodos 
+hacia delante
+hacia atras
+frenar
+
+
+ '''
